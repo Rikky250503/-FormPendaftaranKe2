@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="6dp"
+    android:background="#00ff80"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FORMULIR PENDAFTARAN"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#ADDDD0"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/et_npm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_judul"
+        android:hint="NPM"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/et_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_npm"
+        android:hint="Nama Lengkap"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/tv_jk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_nama"
+        android:layout_marginTop="6dp"
+        android:text="Jenis Kelamin"
+        android:textSize="17sp" />
+
+    <RadioGroup
+        android:id="@+id/rg_jk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_jk"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_lk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Pria" />
+
+        <RadioButton
+            android:id="@+id/rb_pr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="perempuan" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_prodi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rg_jk"
+        android:layout_marginTop="6dp"
+        android:text="Program Studi"
+        android:textSize="17sp" />
+
+    <Spinner
+        android:id="@+id/sp_prodi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_prodi"
+        android:entries="@array/arr_prodi" />
+    <Button
+        android:id="@+id/btn_Daftar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="DAFTAR"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>
